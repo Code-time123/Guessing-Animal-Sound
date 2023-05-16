@@ -4,7 +4,7 @@
 function startClassification()
 {
   navigator.mediaDevices.getUserMedia({ audio: true});
-    classifier = ml5.soundClassifier('https://teachablemachine.withgoogle.com/models/5o1PaOtKh/model.json', modelReady);
+    classifier = ml5.soundClassifier('https://teachablemachine.withgoogle.com/models/u02fOYRBx/model.json', modelReady);
 }
 
 
@@ -28,10 +28,10 @@ function gotResults(error, results) {
     img = document.getElementById('cat') 
     img1 = document.getElementById('dog')
 
-    if (results[0].label == "Dog") {
+    if (results[0].label == "Barking") {
       img.src = 'hi-dog.gif';
       img1.src = 'hi-cat.png';
-    } else if (results[0].label == "Meow") {
+    } else if (results[0].label == "Meowing") {
       img.src = 'hi-dog.png';
       img1.src = 'hi-cat.gif';
   }
